@@ -6,10 +6,11 @@ import "./view/index.css"
 
 class App extends Component {
   render(){
-    // return <RouterIndex/>
     return <div className="pageWrap">
             <MainHeader/>
-            <main className="main"></main>
+            <main className="main">
+              <RouterIndex/>
+            </main>
             <MainFooter/>
     </div>
   }
