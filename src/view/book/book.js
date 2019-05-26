@@ -1,8 +1,23 @@
 import React, {Component} from 'react'
-
+import {Card} from "antd"
+import data from "./data"
 class Book extends Component {
     render(){
-        return "书本页"
+        return (<div className="wrap">
+            {data.map((item,index)=>{
+                return <Card
+                    title={item.title}
+                    type="inner"
+                    key={index}
+                >
+                    <div dangerouslySetInnerHTML={{
+                        __html: item.content
+                    }}>
+
+                    </div>
+                </Card>
+            })}
+        </div>)
     }
 }
 
