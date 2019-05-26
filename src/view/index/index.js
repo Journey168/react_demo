@@ -2,10 +2,12 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom"
 import {Menu, Row, Col} from "antd"
 import IndexMenu from "./indexMenu"
+import IndexList from "./list"
 
 
 class Index extends Component{
     render(){
+        console.log(this.props)
         return <Row className="wrap">
             <Col md={6} xs={0} className="indexSider">
                 <IndexMenu
@@ -20,8 +22,11 @@ class Index extends Component{
                 />   
             </Col>
             <Col md={18} xs={24} style={{
-                height:"500px"
-            }} className="indexList"></Col>
+                    height:"500px"
+                }} className="indexList"
+            >
+                <IndexList/>
+            </Col>
         </Row>
     }
 }

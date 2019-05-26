@@ -9,7 +9,7 @@ class IndexMenu extends Component {
                     mode={this.props.mode}
                 >
                 <Menu.Item>
-                    <Link to="/index/ask">全部</Link>
+                    <Link to="/index/all">全部</Link>
                 </Menu.Item>
                 <Menu.Item>
                     <Link to="/index/good">精华</Link>

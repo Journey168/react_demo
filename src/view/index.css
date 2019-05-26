@@ -77,7 +77,12 @@
     padding-bottom: 9999px;
     margin-bottom: -9999px;
 }
-
+.indexList{
+    padding: 0 10px;
+}
+.indexList p{
+    margin: 0;
+}
 
 
 /* @media all and (max-width: 767px) {
