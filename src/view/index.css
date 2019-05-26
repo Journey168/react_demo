@@ -42,6 +42,7 @@
 .main .wrap{
     border: 1px solid #ccc;
     border-top: none;
+    overflow: hidden;
 }
 
 #indexMenu li {
@@ -49,6 +50,14 @@
     margin-right: -1px;
     text-align: center;
     border-right: 3px solid rgba(0, 0, 0, 0);
+}
+#indexXsMenu {
+    display: flex;
+}
+#indexXsMenu li {
+    flex: 1;
+    float: none;
+    text-align: center;
 }
 #indexMenu {
     border-right: none;
@@ -59,11 +68,19 @@
     background: #e6f7ff;
 }
 
-.indexList {
+/* .indexList {
     border-left: 1px solid #ccc;
+} */
+
+.indexSider {
+    border-left: 1px solid #ccc;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
 }
 
-@media all and (max-width: 767px) {
+
+
+/* @media all and (max-width: 767px) {
     #indexMenu {
         display: flex;
         border-bottom: 1px solid #ccc;
@@ -82,4 +99,4 @@
     .indexList {
         border-left: none;
     }
-}
+} */
