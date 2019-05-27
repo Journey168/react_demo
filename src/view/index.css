@@ -83,8 +83,20 @@
 .indexList p{
     margin: 0;
 }
+.replyList .ant-list-item-meta-avatar{
+    display: block;
+}
+.ant-list-item-action {
+    margin-left: 50px;
+}
+.ant-list-item-meta {
+    min-width: 200px;
+    align-items: center;
+}
 
-
+.wrap img {
+    max-width: 100%;
+}
 /* @media all and (max-width: 767px) {
     #indexMenu {
         display: flex;
