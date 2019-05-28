@@ -22,10 +22,10 @@ class Index extends Component{
                 />   
             </Col>
             <Col md={18} xs={24} style={{
-                    height:"500px"
+                    // height:"500px"
                 }} className="indexList"
             >
-                <IndexList/>
+                <IndexList tab={this.props.match.params.id}/>
             </Col>
         </Row>
     }

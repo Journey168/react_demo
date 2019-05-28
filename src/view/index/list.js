@@ -1,14 +1,51 @@
 import React, {Component} from 'react'
 import {List, Avatar} from "antd"
 import {Link} from "react-router-dom"
-import data from "./data"
+import {connect} from "react-redux"
+import axios from "axios"
 import TxtTag from "../txtTag"
 
 class IndexList extends Component {
+    constructor(arg){
+        super(arg)
+        this.state = {
+            page: 1
+        }
+        this.getData(this.props.tab);
+    }
+    shouldComponentUpdate(nextProps,nextState){
+        if(this.props.tab!=nextProps.tab){
+            this.getData(nextProps.tab)
+            return false
+        }
+        return true
+    }
+    getData(tab){
+        this.props.dispatch((dispatch)=>{
+            dispatch({
+                type:"LIST_UPDATA"
+            })
+            axios.get(`https://cnodejs.org/api/v1/topics?tab=${tab}&page=${this.state.page}&limit=15`)
+            .then((res)=>{
+                dispatch({
+                    type:"LIST_UPDATA_SUCC",
+                    data: res.data
+                })
+            })
+            .catch((error)=>{
+                dispatch({
+                    type:"LIST_UPDATA_REEOR",
+                    data: error
+                })
+            })
+        })
+    }
     render() {
+        console.log(this.props)
+        let {loading,data} = this.props;
         return <List
-            loading={false}
-            dataSource={data.data}
+            loading={loading}
+            dataSource={data}
             renderItem={item=>(<List.Item
                 key={item.id}
                 actions={["回复:"+item.reply_count,"访问:"+item.visit_count]}
@@ -32,4 +69,4 @@ class IndexList extends Component {
     }
 }
 
-export default IndexList
+export default connect(state=>state.list)(IndexList)
