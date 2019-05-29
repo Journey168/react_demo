@@ -6,6 +6,7 @@ import TxtTag from "../txtTag"
 export default class TxtDetails extends Component{
     render(){
         let {loading,data} = this.props;
+        console.log(data)
         const title = (<div>
             <h1>{data.title}</h1>
             <div style={{

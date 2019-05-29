@@ -1,6 +1,6 @@
 import React, {Component} from "react";
-import {Link} from "react-router-dom"
-import {Menu, Row, Col} from "antd"
+// import {Link} from "react-router-dom"
+import { Row, Col} from "antd"
 import IndexMenu from "./indexMenu"
 import IndexList from "./list"
 

@@ -1,4 +1,3 @@
-import { tuple } from "antd/lib/_util/type";
 
 function list(state={
     data:[],
@@ -16,10 +15,10 @@ function list(state={
                 data: action.data.data
             }
         case "LIST_UPDATA_REEOR":
-        return {
-            loading: false,
-            data: []
-        }
+            return {
+                loading: false,
+                data: []
+            }
         default:
             return state;
     }

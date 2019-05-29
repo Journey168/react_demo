@@ -14,7 +14,7 @@ class IndexList extends Component {
         this.getData(this.props.tab);
     }
     shouldComponentUpdate(nextProps,nextState){
-        if(this.props.tab!=nextProps.tab){
+        if(this.props.tab!==nextProps.tab){
             this.getData(nextProps.tab)
             return false
         }
