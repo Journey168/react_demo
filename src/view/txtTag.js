@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import {Tag} from "antd"
-import { now } from 'moment';
+// import { now } from 'moment';
 const tab = {
     top:{
         color: "magenta",
